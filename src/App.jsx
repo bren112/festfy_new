@@ -38,7 +38,7 @@ function App() {
               Nunca foi tão tranquilo <span id="italic"> organizar</span> <br /> eventos inesquecíveis.
             </h1>
             <p id="subtitle">
-              Acreditamos que o <span id="italicColor">🙉 sucesso </span>pertence aos audaciosos.{' '}
+              Acreditamos que o <span id="italicColor">sucesso </span>pertence aos audaciosos.{' '}
             </p>
             <br />
 
@@ -47,8 +47,12 @@ function App() {
               <button>Valores</button>
             </div>
           </div>
+          
         </div>
+
+     
       </div>
+
 
       <div className="containerImg" ref={containerRef}>
         <div className="card">

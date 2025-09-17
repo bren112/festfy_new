@@ -9,6 +9,7 @@ function Header(){
 
                 <div className="infos">
                     <p>conhecer</p>
+               
                 </div>
             </div>
         </>

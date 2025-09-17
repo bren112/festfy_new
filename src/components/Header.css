@@ -39,3 +39,7 @@
     cursor: alias;
     text-decoration: underline;
 }
+.infos{
+    display: flex;
+    gap: 5px;
+}
