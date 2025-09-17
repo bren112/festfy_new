@@ -222,13 +222,10 @@ align-items: center;
   align-items: center;
 }
 @media (max-width: 768px) {
-  body {
-    padding: 1.5rem;
-  }
-  
+
   .yellow-card {
     padding: 2.5rem;
-    border-radius: 20px;
+
   }
   
   h1 {
