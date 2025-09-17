@@ -13,8 +13,8 @@ body {
 
 .container {
   width: 100vw;
-  height: 75vh;
   margin: 0;
+  padding-bottom: 50px;
 }
 
 .yellow-card {
