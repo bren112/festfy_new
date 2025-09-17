@@ -125,18 +125,13 @@ body {
 /*======CARD=====*/
 .containerImg {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;  /* alinha pelo topo */
-  flex-wrap: wrap;          /* quebra linha no mobile */
-  gap: 2rem;                /* espaço entre os cards */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  align-items: stretch; /* Estica os cards para a mesma altura */
+  flex-wrap: wrap;
+  gap: 2rem;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-out;
-}
-
-.card:nth-child(2) {
-  width: 60pc;       /* mais estreito */
-
 }
 
 .containerImg.show {
@@ -149,7 +144,7 @@ body {
 }
 
 .card {
-  display: inline-flex;      
+  display: flex; 
   flex-direction: column;
   align-items: center;
   border: solid 1px gray;
@@ -157,21 +152,14 @@ body {
   border-radius: 30px;
   padding: 1.5rem;
   box-sizing: border-box;
-  width: auto;                
-  max-width: 350px;          
+  flex: 1 1 300px; 
+  max-width: 350px;
 }
 .conteudoCard{
 margin: 1pc;
 display: flex;
 flex-direction: column;
 align-items: center;
-}
-.conteudoCard2{
-margin: 1pc;
-display: flex;
-flex-direction: row;
-align-items: center;
-
 }
 .titleImg{
   display: flex;
@@ -220,6 +208,11 @@ align-items: center;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+#spanAmarelo{
+  /* font-style: italic; */
+  color: #e49c02;
+
 }
 @media (max-width: 768px) {
 
