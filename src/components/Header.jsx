@@ -4,7 +4,7 @@ function Header(){
         <>
             <div className="header">
                 <div className="logo">
-                    <h1>Festfy🍌</h1>
+                    <h1>🍌NanaTicket</h1>
                 </div>
 
                 <div className="infos">
