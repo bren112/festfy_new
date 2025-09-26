@@ -96,9 +96,10 @@ function App() {
   
         {/* Texto sobreposto no vídeo */}
         <div className="video-content">
-          <p className="video-subtitle">
-            Com a Festfy, cada momento se torna inesquecível
-          </p>
+          <h2 className="video-title">
+          Festfy :)
+          </h2>
+      
         </div>
       </div>
       {/* 3. POR ÚLTIMO: Cards com efeito de entrada */}
