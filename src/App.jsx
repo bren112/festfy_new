@@ -84,16 +84,26 @@ function App() {
       </div>
 
       {/* 2. DEPOIS: Vídeo com efeito de entrada */}
-      <div className="video-section" ref={videoSectionRef}>
-        <div className="video-background">
-          <video ref={videoRef} className="background-video" autoPlay muted loop playsInline>
-            <source src={video1} type="video/mp4" />
-            Seu navegador não suporta vídeos HTML5.
-          </video>
-          <div className="video-overlay"></div>
+{/* 2. DEPOIS: Vídeo com texto */}
+        <div className="video-section" ref={videoSectionRef}>
+          <div className="video-background">
+            <video ref={videoRef} className="background-video" autoPlay muted loop playsInline>
+              <source src={video1} type="video/mp4" />
+              Seu navegador não suporta vídeos HTML5.
+            </video>
+            <div className="video-overlay"></div>
+          </div>
+  
+        {/* Texto sobreposto no vídeo */}
+        <div className="video-content">
+          <h2 className="video-title">
+            Transforme seus <span className="video-highlight">eventos</span>
+          </h2>
+          <p className="video-subtitle">
+            Com a Festfy, cada momento se torna <span className="video-highlight">inesquecível</span>
+          </p>
         </div>
       </div>
-
       {/* 3. POR ÚLTIMO: Cards com efeito de entrada */}
       <div className="cards-container">
         <div className="containerImg" ref={containerRef}>
