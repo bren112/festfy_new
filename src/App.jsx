@@ -96,11 +96,8 @@ function App() {
   
         {/* Texto sobreposto no vídeo */}
         <div className="video-content">
-          <h2 className="video-title">
-            Transforme seus <span className="video-highlight">eventos</span>
-          </h2>
           <p className="video-subtitle">
-            Com a Festfy, cada momento se torna <span className="video-highlight">inesquecível</span>
+            Com a Festfy, cada momento se torna inesquecível
           </p>
         </div>
       </div>

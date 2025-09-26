@@ -435,12 +435,7 @@ body {
     right: 10px;
     bottom: 10px;
   }
-  
-  .botoes {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-  }
+
   
   .card {
     padding: 1rem;
