@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +9,12 @@
 
 body {
   background-color: #fdd85d;
-
 }
 
 .container {
   width: 100vw;
   margin: 0;
-  padding-bottom: 50px;
+  /* padding-bottom removido para o vídeo ficar logo abaixo */
 }
 
 .yellow-card {
@@ -51,7 +51,6 @@ body {
   z-index: 2;
 }
 
-
 #title {
   font-size: 2.6rem;
   color: #000000;
@@ -64,6 +63,7 @@ body {
   font-style: normal;
   letter-spacing: -3px;
 }
+
 #italic{
   font-style: italic;
   font-weight: 370;
@@ -75,6 +75,7 @@ body {
   font-weight: bold;
   color: #e49c02;
 }
+
 #subtitle {
   font-size: 17px;
   color: #1b1b1b;
@@ -87,7 +88,6 @@ body {
   max-width: 800px;
   font-weight: 500;
   line-height: 1.6;
-
 }
 
 .highlight {
@@ -114,58 +114,117 @@ body {
   height: 2.4pc;
   color: #000000;
   box-shadow: #000000 5px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .botoes button:hover{
   transition: 0.2s;
   box-shadow: #e49c02 5.2px 8.2px;
   text-decoration: underline;
   color: #e49c02;
-
 }
-/*======CARD=====*/
-.containerImg {
-  display: flex;
-  justify-content: center; /* Centraliza os cards horizontalmente */
-  align-items: stretch; /* Estica os cards para a mesma altura */
-  flex-wrap: wrap;
-  gap: 2rem;
+
+/* ====== SEÇÃO DO VÍDEO COM EFEITO DE ENTRADA ====== */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
 
-.containerImg.show {
-  opacity: 1;               /* quando aparece */
-  transform: translateY(0); /* volta para posição original */
+.video-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.containerImg img{
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(253, 216, 93, 0.852);
+}
+
+/* ====== CONTAINER DOS CARDS ====== */
+.cards-container {
+  background-color: #fdd85d;
+  padding: 4rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ====== CARDS COM EFEITO DE ENTRADA ====== */
+.containerImg {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.containerImg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.containerImg img {
   width: 9pc;
 }
 
 .card {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 1px gray;
+  border: solid 1px rgba(128, 128, 128, 0.3);
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border-radius: 30px;
   padding: 1.5rem;
   box-sizing: border-box;
-  flex: 1 1 300px; 
+  flex: 1 1 300px;
   max-width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.conteudoCard{
-margin: 1pc;
-display: flex;
-flex-direction: column;
-align-items: center;
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
-.titleImg{
+
+.conteudoCard {
+  margin: 1pc;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.card h1{
+
+.card h1 {
   font-size: 2rem;
   color: #000000;
   margin-bottom: 1.5rem;
@@ -175,9 +234,10 @@ align-items: center;
   font-optical-sizing: auto;
   font-weight: 450;
   font-style: normal;
-  letter-spacing: -3px;
+  letter-spacing: -1px;
 }
-.conteudoCard p{
+
+.conteudoCard p {
   font-size: 16px;
   color: #1b1b1b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -185,12 +245,33 @@ align-items: center;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   max-width: 350px;
   font-weight: 500;
   line-height: 1.6;
   text-align: justify;
 }
+
+#spanAmarelo {
+  color: #e49c02;
+  font-weight: 600;
+}
+
+/* Imagem de placeholder - substitua por sua própria imagem */
+.placeholder-img {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #fdd85d 0%, #e49c02 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .Pdeitado p{
   font-size: 16px;
   color: #1b1b1b;
@@ -204,29 +285,51 @@ align-items: center;
   line-height: 1.6;
   text-align: justify;
 }
+
 .deita{
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-#spanAmarelo{
-  /* font-style: italic; */
-  color: #e49c02;
 
+#autor{
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  color: #d1cdcd;
+  font-style: italic;
 }
-@media (max-width: 768px) {
 
+/* ====== MEDIA QUERIES ====== */
+@media (max-width: 768px) {
   .yellow-card {
     padding: 2.5rem;
-
+    height: auto;
+    min-height: 35pc;
   }
   
-  h1 {
-    font-size: 2.4rem;
+  #title {
+    font-size: 2.2rem;
   }
   
-  p {
-    font-size: 1.3rem;
+  .cards-container {
+    padding: 2rem 1rem;
+  }
+  
+  .containerImg {
+    gap: 1.5rem;
+  }
+  
+  .card {
+    padding: 1.2rem;
+  }
+  
+  .card h1 {
+    font-size: 1.8rem;
+  }
+  
+  .conteudoCard p {
+    font-size: 15px;
   }
 }
 
@@ -235,13 +338,32 @@ align-items: center;
     padding: 2rem 1.5rem;
   }
   
-  h1 {
-    font-size: 2rem;
+  #title {
+    font-size: 1.8rem;
+    letter-spacing: -1px;
   }
   
-  p {
-    font-size: 1.1rem;
+  .botoes {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
   }
   
- 
+  .card {
+    padding: 1rem;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  
+  .card h1 {
+    font-size: 1.6rem;
+  }
+  
+  .conteudoCard p {
+    font-size: 14px;
+  }
+  
+  .video-section {
+    height: 70vh; /* Reduz a altura do vídeo em mobile */
+  }
 }
